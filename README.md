@@ -70,5 +70,3 @@ I am quick learner and hard worker.
 <br>In the past 3 years I learned so many skills I am interested in making websites and Android Applications.
 
 <h4>-Thank you</h4>
-
-
