@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# React App Results viewer 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p>Results Viewer<p>
+<h3>Heroku Hosted link</h3>
+<a href="https://result-status.herokuapp.com/">https://result-status.herokuapp.com/</a>
 
-## Available Scripts
+Back End API is created using node.js and express.
+# Banck End Git link
+https://github.com/Vijaya9418/backend-API
 
-In the project directory, you can run:
+# Components
+<h1>App.js</h1>
+It is a functionaly component.<br>
+First we stat with App.js here I added routing using "react-router-dom".<br>
+<img width='100px' src='./images/struct.jpg'><br>
+App.js also import Navbar.js component from componet/nav folder and set<br> on top of all components to visible in all pages.
+<br>
+It has 2 routs<br>
+/ and /about 2 routs are added to this simple app.<br>
+<h1>Home.js</h1>
+it is a class component.<br>
+/ will render Home.js component. I has the input form that allows user to enter roll numbers comma seperated and submit.<br>
+If the input format is not valid then a alert will be displayed.<br>
+For performance 5 results at a time is set as limit it can be increased my calling API multiple times one after other.
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<img hight='300px' width='500px' src='./images/home.jpg'><br>
+in Home component on submit of the form it will pass data to the <h3>getnumbers()</h3>  function this splits the daa
+and validated the data format and make the input string into arry of integers.<br>
+This funciton will display alert message if the input format is invalid.<br>
+<br>This funciton will call getdata function with array passed as parameter this will call setdatatxt(arr) funciton.<br>
+<br>
+setdatatxt(arr) is a synchronous funcitons it will wait for data to fetch form the provided api and sets the data and calls the 
+funciton makeTable.
+<br>
+makeTable(a,b) function will make dictionary form the given input which can be used to build a table by table component.
+<br><br>
+Table component will take the dicitonary as props and build the table using javascirpt dom manupulations.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+If the input data is all good this funciton will pass data to
+<h1>Test Cases 1: </h1>
+<p>2,3</p> output below image<br>
+<img hight='300px' width='500px' src='./images/case2.jpg'><br>
+<h1>Test Cases 2: </h1>
+<p>Input: 2,3,300,30,5</p> output below image<br>
+<img hight='300px' width='500px' src='./images/case5.jpg'><br>
+<h1>Test Cases 3: </h1>
+<p>345,63,127</p> output below image<br>
+<img hight='300px' width='500px' src='./images/case12.jpg'><br>
 
-### `yarn test`
+<img hight='300px' width='500px' src='./images/case12a.jpg'><br>
+as the sate gets update React will automatically update the state every where which results in call of <br>
+<h1>Table.js</h1>
+it is a class component.<br>
+Table component it will create table using the data pased as props.
+<br><br>
+In Table this will receive the top N frequency words object in the form of props and crate a Table and display it to users.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img hight='300px' width='500px' src='./images/aboutme.jpg'><br>
+<h1>Navbar.js</h1>
+it is a functional component.<br>
+It returns a nav bar that is build using bootstrap 4.
+<h1>About.js</h1>
+it is a class component.<br>
+About.js component is all about me any my skills. Please check my skills match this role really well.<br>
 
-### `yarn build`
+<img hight='300px' width='500px' src='./images/myskills.jpg'><br>
+I am best in desigining websites and good in React.js ,Javascript ,CSS. I  also know PHP and many other technologies like redux ,using of firebase firestore.<br>
+I am quick learner and hard worker. 
+<br>In the past 3 years I learned so many skills I am interested in making websites and Android Applications.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h4>-Thank you</h4>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
